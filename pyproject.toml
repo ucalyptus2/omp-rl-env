@@ -1,0 +1,16 @@
+[project]
+name = "taskminer-omp"
+version = "0.1.0"
+description = "rl-env-use task mining on omp's browser relay (CDP attach)"
+requires-python = ">=3.11"
+dependencies = [
+    "browser-use",  # BrowserSession(cdp_url=...) attaches to the relay
+    "httpx",
+]
+
+[project.scripts]
+taskminer-omp = "taskminer_omp.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["taskminer_omp*"]
